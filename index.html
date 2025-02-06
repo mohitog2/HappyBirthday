@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+
+
+        <audio id="background-music" autoplay loop>
+            <source src="happy_birthday.mp3" type="audio/mp3">
+        </audio>
+
+        <div id="overlay">
+            <button id="showBtn" onclick="showWebsite()" class="btn-class-name">
+                <span class="back"></span>
+                <span class="front"></span>
+            </button>
+        </div>
+
+        <div id="content">
+
+            <div class="card">
+            <div class="text-container">
+                <div class="text">Hello Madam ji!!✨</div>
+                <div class="text">It's your birthday!! 🥳</div>
+                <div class="text">i've prepared something special for ya!!</div>
+                <div class="text">before that, i wanna tell you something..</div>
+                <div class="text">You're the best person i've ever met!!</div>
+                <div class="text">let's get started...</div>
+                <div class="text"><button class="clickme" onclick="showLoaderAndRedirect()">Click Me</button></div>
+
+            </div>
+                
+
+                
+            </div>
+
+            <div id="loader">
+                <div class="container">
+                    <div class="preloader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+            
+    </body>
+
+
+    </div>
+
+    <script>
+        function showWebsite() {
+            document.getElementById("content").style.display = "block";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function showLoaderAndRedirect() {
+            document.getElementById("loader").style.display = "block";
+
+            setTimeout(function () {
+
+                window.location.href = "ques.html";
+            }, 5000);
+        }
+
+        window.onload = function () {
+            var audio = document.getElementById('background-music');
+
+            audio.volume = 0.1;
+
+
+            if (localStorage.getItem('musicPlaying') === 'false') {
+                audio.pause();
+            }
+
+        };
+
+
+        
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

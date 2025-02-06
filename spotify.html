@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love 💖</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #ff758c, #ff7eb3);
+            font-family: 'Dancing Script', cursive;
+            overflow: hidden;
+            text-align: center;
+        }
+
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+            margin: 20px;
+        }
+
+
+        h1 {
+            font-size: 3em;
+            color: #ff3366;
+            margin-bottom: 15px;
+        }
+
+
+        .btn {
+            font-size: 20px;
+            padding: 12px 25px;
+            background: #ff3366;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 10px #ff3366;
+        }
+
+        .btn:hover {
+            background: #e12b5c;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff3366;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .heart {
+            position: absolute;
+            color: #ff3366;
+            font-size: 25px;
+            animation: floatUp 5s infinite ease-in-out;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+
+
+        .spotify {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p>For My Beautiful Love,<br> i think of you whenevr i listen to this song and i wanna dedicate it to youuu.. 💕</p>
+
+
+        <div class="spotify">
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/6tO8Z50sTFqTMBZgcuVCWQ?utm_source=generator" width="100%" height="352"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <a href="parah.html">
+        <button class="btn">Let's Move Forward ➡️</button>
+        </a>
+    </div>
+
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Between 2s to 5s
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+
+</html>
